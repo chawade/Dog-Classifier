@@ -1,5 +1,3 @@
-# app/preprocess.py
-
 import os
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
@@ -10,12 +8,6 @@ def create_generators(
     img_size=(224, 224),
     batch_size=32
 ):
-    """
-    สร้าง train_gen, val_gen, test_gen แยกตามโฟลเดอร์
-    - train_dir: path โฟลเดอร์ train (แต่ละคลาสเป็น subfolder)
-    - val_dir: path โฟลเดอร์ val
-    - test_dir: path โฟลเดอร์ test
-    """
 
     # Data Augmentation สำหรับ train
     train_datagen = ImageDataGenerator(
@@ -29,7 +21,6 @@ def create_generators(
         fill_mode='nearest'
     )
 
-    # สำหรับ val/test ส่วนมากไม่ใส่ Augmentation (นอกจาก rescale)
     val_datagen = ImageDataGenerator(rescale=1./255)
     test_datagen = ImageDataGenerator(rescale=1./255)
 
