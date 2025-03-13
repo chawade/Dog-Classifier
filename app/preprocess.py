@@ -18,6 +18,7 @@ def create_generators(
         shear_range=0.2,
         zoom_range=0.2,
         horizontal_flip=True,
+        vertical_flip=True,
         fill_mode='nearest'
     )
 

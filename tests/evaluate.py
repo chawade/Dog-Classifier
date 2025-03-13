@@ -10,7 +10,7 @@ from tensorflow.keras.models import load_model
 from app.preprocess import create_generators
 
 # 1) โหลดโมเดล
-model_path = os.path.join("app", "models", "dog_breeds_classifier.h5")
+model_path = os.path.join("app", "models", "best_model.h5")
 model = load_model(model_path)
 
 # 2) กำหนด path สำหรับ train, val, test
